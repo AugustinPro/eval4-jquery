@@ -51,9 +51,29 @@ function ShapeChange() {
         }
     });
 }
-
-
-
+/*
+function Movement() {
+    let playArea = document.getElementById('redsquare-app');
+    playArea.addEventListener('keydown', (e) => {
+        if (!e.repeat)
+          
+        else
+          
+      });
+      
+      playArea.addEventListener('beforeinput', (e) => {
+        logMessage(`beforeinput event. you are about inputing "${e.data}"`);
+      });
+      
+      playArea.addEventListener('input', (e) => {
+        logMessage(`input event. you have just inputed "${e.data}"`);
+      });
+      
+      playArea.addEventListener('keyup', (e) => {
+        logMessage(`keyup event. key property value is "${e.key}"`);
+      });
+}
+*/
 
 $(function () {
     GameButton();
