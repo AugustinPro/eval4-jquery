@@ -17,6 +17,26 @@ function GameButton() {
     });
 }
 
+function SizeChange() {
+    let size = 50;
+    $("#scaleUp").click(function (e) { 
+        e.preventDefault();
+        //let sizeUp = $("square").width();
+        //console.log(sizeUp);
+        if($("div").hasClass("is-active") == true){
+            size = size + 20;
+            $(".square").stop().animate({"width": size, "height": size});
+        }
+    });
+    $("#scaleDown").click(function (e) { 
+        e.preventDefault();
+        if($("div").hasClass("is-active") == true && size > 50){
+            size = size - 20;
+            $(".square").stop().animate({"width": size, "height": size});
+        }
+    });
+}
+
 
 
 
@@ -24,4 +44,5 @@ function GameButton() {
 
 $(function () {
     GameButton();
+    SizeChange();
 });
