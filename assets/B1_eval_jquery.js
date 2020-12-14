@@ -37,7 +37,20 @@ function SizeChange() {
     });
 }
 
-
+function ShapeChange() {
+    $("#shapeCircle").click(function (e) { 
+        e.preventDefault();
+        if($("div").hasClass("is-active") == true){
+            $(".square").css("border-radius", "50%");
+        }
+    });
+    $("#shapeSquare").click(function (e) { 
+        e.preventDefault();
+        if($("div").hasClass("is-active") == true){
+            $(".square").css("border-radius", "0%");
+        }
+    });
+}
 
 
 
@@ -45,4 +58,5 @@ function SizeChange() {
 $(function () {
     GameButton();
     SizeChange();
+    ShapeChange();
 });
